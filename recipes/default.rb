@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 windows_task 'Chef client' do
-  user 'Administrator'
-  password '<Your Password>'
+  user node['task']['user']
+  password node['task']['pwd']
   cwd 'C:\chef\bin'
   command 'chef-client -L C:\tmp'
   run_level :highest

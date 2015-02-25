@@ -17,4 +17,5 @@
 # limitations under the License.
 #
 default['task']['path'] = "c:\\chef"
-default['task']['url'] = "https://dl.dropboxusercontent.com/u/36379525/ChefClient.xml"
+default['task']['user'] = "domain\\username"
+default['task']['pwd'] = "<password>"
