@@ -1,11 +1,14 @@
 Description
 ===========
 
-TODO: Enter the cookbook description here.
+This is a shell recipe for setting up a chef-client task to run every 15 minutes
 
 Supported Platforms
 ===================
 
+* Windows Server 2008 R2
+* Windows Server 2012
+* Windows Server 2012 R2
 
 Cookbooks
 =========
@@ -14,18 +17,26 @@ Cookbooks
 
 Attributes
 ==========
+
 default.rb
 ----------
+
 *default['task']['path'] = "c:\\chef"
+
+
 *default['task']['user'] = "domain\\username"
+
+
 *default['task']['pwd'] = "<password>"
 
 * I create a new <domain>.rb for each domain
 
 Recipes
 =======
+
 default.rb
 ----------
+
 *windows_task 'Chef client' do
 *  user node['task']['user']
 *  password node['task']['pwd']
